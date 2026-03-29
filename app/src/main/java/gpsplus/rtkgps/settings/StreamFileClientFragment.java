@@ -3,10 +3,9 @@ package gpsplus.rtkgps.settings;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.EditTextPreference;
+import android.preference.PreferenceFragment;
 import android.util.Log;
-
-import androidx.preference.EditTextPreference;
-import androidx.preference.PreferenceFragmentCompat;
 
 //import com.dropbox.sync.android.DbxAccountManager;
 

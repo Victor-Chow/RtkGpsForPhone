@@ -34,7 +34,7 @@ import java.util.regex.Pattern;
 import javax.annotation.Nonnull;
 
 
-public class StationPositionActivity extends AppCompatActivity {
+public class StationPositionActivity extends Activity {
 
     private static final boolean DBG = BuildConfig.DEBUG & false;
     static final String TAG = StationPositionActivity.class.getSimpleName();

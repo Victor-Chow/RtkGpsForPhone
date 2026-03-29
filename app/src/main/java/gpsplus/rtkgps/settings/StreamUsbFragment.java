@@ -4,10 +4,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.preference.ListPreference;
+import android.preference.PreferenceFragment;
 import android.util.Log;
-
-import androidx.preference.ListPreference;
-import androidx.preference.PreferenceFragmentCompat;
 
 import gpsplus.rtkgps.MainActivity;
 import gpsplus.rtkgps.usb.SerialLineConfiguration;

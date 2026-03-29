@@ -3,10 +3,8 @@ package gpsplus.rtkgps.settings;
 import java.util.List;
 
 import gpsplus.rtkgps.R;
+import android.preference.PreferenceActivity;
 import android.view.MenuItem;
-
-import androidx.core.app.NavUtils;
-import androidx.preference.PreferenceActivity;
 
 public class SettingsActivity extends PreferenceActivity {
 
