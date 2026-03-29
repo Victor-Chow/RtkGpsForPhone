@@ -1,14 +1,16 @@
 package gpsplus.rtkgps.settings;
 
 import android.app.Activity;
-import android.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
+import androidx.fragment.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
@@ -24,7 +26,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class StartupShutdownSettingsActivity extends Activity {
+public class StartupShutdownSettingsActivity extends AppCompatActivity {
 
     private static final boolean DBG = BuildConfig.DEBUG & false;
     static final String TAG = StartupShutdownSettingsActivity.class.getSimpleName();
@@ -123,7 +125,7 @@ public class StartupShutdownSettingsActivity extends Activity {
         SelectCommandsFileDialog dialog;
         dialog = new SelectCommandsFileDialog();
 
-        dialog.show(getFragmentManager(), "commandsSelector");
+        dialog.show(getSupportFragmentManager(), "commandsSelector");
 
     }
 

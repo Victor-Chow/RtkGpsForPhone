@@ -60,18 +60,18 @@
 
         <activity
             android:name=".settings.StreamDialogActivity"
-            android:theme="@android:style/Theme.Holo.Dialog.MinWidth" />
+            android:theme="@style/Theme.AppCompat.Dialog.MinWidth" />
 
         <activity
             android:name=".settings.StartupShutdownSettingsActivity"
-            android:theme="@android:style/Theme.Holo.Dialog"  />
+            android:theme="@style/Theme.AppCompat.Dialog"  />
 
         <activity
             android:name=".settings.StationPositionActivity"
-            android:theme="@android:style/Theme.Holo.Dialog" />
+            android:theme="@style/Theme.AppCompat.Dialog" />
         <activity
             android:name=".ToolsActivity"
-            android:theme="@android:style/Theme.Holo.Dialog"
+            android:theme="@style/Theme.AppCompat.Dialog"
             />
 
         <activity android:name=".AboutActivity"
@@ -80,6 +80,7 @@
 
         <service
             android:name=".RtkNaviService"
+            android:foregroundServiceType="location"
             android:exported="false" >
             <intent-filter>
                 <action android:name="gpsplus.rtkgps.RtkNaviService.START" />

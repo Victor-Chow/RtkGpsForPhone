@@ -5,13 +5,14 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.preference.CheckBoxPreference;
-import android.preference.EditTextPreference;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceFragment;
 import android.text.TextUtils;
+
+import androidx.preference.CheckBoxPreference;
+import androidx.preference.EditTextPreference;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.PreferenceFragmentCompat;
 
 import gpsplus.rtkgps.BuildConfig;
 import gpsplus.rtkgps.R;
@@ -19,7 +20,7 @@ import gpsplus.rtklib.SolutionOptions;
 import gpsplus.rtklib.constants.GeoidModel;
 import gpsplus.rtklib.constants.TimeSystem;
 
-public class SolutionOutputSettingsFragment extends PreferenceFragment {
+public class SolutionOutputSettingsFragment extends PreferenceFragmentCompat {
 
     @SuppressWarnings("unused")
     private static final boolean DBG = BuildConfig.DEBUG & true;

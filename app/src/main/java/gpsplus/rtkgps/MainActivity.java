@@ -2,7 +2,6 @@ package gpsplus.rtkgps;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -20,7 +19,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.IBinder;
 import android.os.Parcel;
-import android.preference.PreferenceActivity;
+import androidx.preference.PreferenceActivity;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Log;
@@ -35,7 +34,9 @@ import android.widget.Switch;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.listener.multi.DialogOnAnyDeniedMultiplePermissionsListener;
@@ -67,7 +68,7 @@ import gpsplus.rtkgps.utils.ChangeLog;
 import gpsplus.rtkgps.utils.FileUtils;
 import gpsplus.rtkgps.utils.GpsTime;
 
-public class MainActivity extends Activity implements OnSharedPreferenceChangeListener {
+public class MainActivity extends AppCompatActivity implements OnSharedPreferenceChangeListener {
 
     private static final boolean DBG = BuildConfig.DEBUG & true;
     //    public static final int REQUEST_LINK_TO_DBX = 2654;
@@ -708,7 +709,7 @@ public class MainActivity extends Activity implements OnSharedPreferenceChangeLi
                 throw new IllegalArgumentException();
         }
 
-        getFragmentManager()
+        getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.container, fragment)
                 .commit();

@@ -3,9 +3,10 @@ package gpsplus.rtkgps.settings.widget;
 
 import gpsplus.rtkgps.R;
 import android.content.Context;
-import android.preference.DialogPreference;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.preference.DialogPreference;
 
 public class StartupShutdownCommandsPreference extends DialogPreference {
 

@@ -3,8 +3,9 @@ package gpsplus.rtkgps.settings;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceFragment;
 import android.util.Log;
+
+import androidx.preference.PreferenceFragmentCompat;
 
 import javax.annotation.Nonnull;
 
@@ -14,7 +15,7 @@ import gpsplus.rtkgps.R;
 import gpsplus.rtklib.RtkServerSettings.TransportSettings;
 import gpsplus.rtklib.constants.StreamType;
 
-public class StreamInternalFragment extends PreferenceFragment {
+public class StreamInternalFragment extends PreferenceFragmentCompat {
 
     public static final String INTERNAL_SENSOR_STR = "Internal sensor";
 

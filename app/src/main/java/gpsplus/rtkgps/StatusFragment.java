@@ -3,10 +3,8 @@ package gpsplus.rtkgps;
 import static junit.framework.Assert.assertNotNull;
 
 import android.app.Activity;
-import android.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -25,6 +23,9 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.DialogFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -324,13 +325,13 @@ public class StatusFragment extends Fragment {
 
     private void showSelectSolutionViewDialog() {
         SelectSolutionViewFormatDialog.newInstance(mSolutionView.getFormat())
-        .show(getActivity().getFragmentManager(),
+        .show(getChildFragmentManager(),
                 "Select Solution View Format Dialog");
     }
 
     private void showSelectTimeFormatDialog() {
         SelectTimeFormatDialog.newInstance(mGTimeView.getTimeFormat())
-        .show(getActivity().getFragmentManager(),
+        .show(getChildFragmentManager(),
                 "Select Time Format Dialog");
     }
 

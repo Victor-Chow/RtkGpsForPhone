@@ -3,7 +3,6 @@ package gpsplus.rtkgps;
 import static junit.framework.Assert.assertNotNull;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.location.Location;
@@ -17,6 +16,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
 
 import butterknife.ButterKnife;
 import butterknife.BindView;

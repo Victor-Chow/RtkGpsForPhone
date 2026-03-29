@@ -3,6 +3,8 @@ package gpsplus.rtkgps;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -24,7 +26,7 @@ import java.util.zip.GZIPInputStream;
 
 
 
-public class ToolsActivity extends Activity implements IDownloaderAccessResponse{
+public class ToolsActivity extends AppCompatActivity implements IDownloaderAccessResponse{
 
     private final String TAG = ToolsActivity.class.getSimpleName();
     @SuppressWarnings("unused")

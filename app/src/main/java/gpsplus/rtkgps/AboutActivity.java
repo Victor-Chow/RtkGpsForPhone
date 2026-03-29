@@ -1,9 +1,9 @@
 package gpsplus.rtkgps;
 
 import android.app.Activity;
-import android.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
+import androidx.fragment.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -14,12 +14,14 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import gpsplus.rtkgps.utils.ChangeLog;
 import gpsplus.rtkgps.utils.Translated;
 
 import java.util.Locale;
 
-public class AboutActivity extends Activity {
+public class AboutActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +51,7 @@ public class AboutActivity extends Activity {
     public void onLegacyInfoButtonClicked(View v) {
         final DialogFragment dialog;
         dialog = new OpenSourceLicensesDialog();
-        dialog.show(getFragmentManager(), null);
+        dialog.show(getSupportFragmentManager(), null);
     }
 
     public void onChangelogButtonClicked(View v) {
